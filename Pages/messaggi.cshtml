@@ -1,0 +1,33 @@
+﻿@page
+@model MessaggiModel
+<link rel="stylesheet" href="/css/style.css" />
+
+<h2>Messaggi ricevuti</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Messaggio</th>
+      <th>Azioni</th>
+    </tr>
+  </thead>
+  <tbody>
+    <form method="POST">
+      @foreach (var msg in Model.Messaggi)
+      {
+        <tr>
+          <td>@msg.Nome</td>
+          <td>@msg.Testo</td>
+          <td>
+            <button type="submit" name="Id" value="@msg.Id" class="elimina">Elimina</button>
+          </td>
+        </tr>
+      }
+
+      @Html.AntiForgeryToken()
+    </form>
+  </tbody>
+</table>
+<p>
+  <a href="/" class="indietro">Indietro</a>
+</p>

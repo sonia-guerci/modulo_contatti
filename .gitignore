@@ -1,0 +1,31 @@
+.DS_Store
+
+# Build outputs
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider / JetBrains
+.idea/
+*.sln.iml
+
+# ASP.NET Logs
+*.log
+
+# Secrets and config
+appsettings*.json
+*.db
+*.sqlite
+.env
+
+# VS Code (included for UI-based configs)
+# You can exclude specific files if needed:
+# .vscode/settings.json  ← personal formatting preferences
+# .vscode/tasks.json     ← build tasks for UI
+# .vscode/launch.json    ← debugger and run configs
+# .vscode/extensions.json ← extension recommendations

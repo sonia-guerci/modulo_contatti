@@ -1,0 +1,19 @@
+﻿@page
+@model ContattoModel
+<link rel="stylesheet" href="/css/style.css" />
+
+<h2>Modulo di contatto</h2>
+<form method="post">
+  <label>Nome:</label>
+  <input type="text" name="Nome" required />
+  <label>Messaggio:</label>
+  <textarea name="TestoMessaggio" required></textarea>
+  <button type="submit">Invia</button>
+  @Html.AntiForgeryToken()
+</form>
+
+@if (Model.Inviato)
+{
+  <p class="conferma">Grazie, @Model.Nome! Messaggio ricevuto.</p>
+}
+<a href="/" class="indietro">Indietro</a>
